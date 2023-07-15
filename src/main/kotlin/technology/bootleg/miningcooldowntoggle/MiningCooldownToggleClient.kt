@@ -5,6 +5,8 @@
  * Tweaks I made:
  * - Converted to Kotlin
  * - Tweaks to variable names & identifier strings to reference my mod name
+ * - Moved keybind out of Misc category and into it's own category
+ * - Switched toggle notification from a chat message to an action bar message
  */
 package technology.bootleg.miningcooldowntoggle
 
@@ -29,7 +31,7 @@ class MiningCooldownToggleClient : ClientModInitializer {
             "key.miningcooldowntoggle.toggle",
             InputUtil.Type.KEYSYM,
             GLFW.GLFW_KEY_G,
-            "key.categories.misc"
+            "key.categories.miningcooldowntoggle"
         ))
 
         ClientTickEvents.END_CLIENT_TICK.register(ClientTickEvents.EndTick { client ->
@@ -37,7 +39,7 @@ class MiningCooldownToggleClient : ClientModInitializer {
                 client.player?.let {
                     cooldownEnabled = !cooldownEnabled
                     it.sendMessage(
-                        Text.literal("Cooldown toggled")
+                        Text.literal("Cooldown toggled"), true
                     )
                 }
             }
