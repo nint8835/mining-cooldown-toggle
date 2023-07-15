@@ -1,3 +1,11 @@
+/**
+ * Based on NoMiningCooldownClient.java from the NoMiningCooldown mod by Daxanius, licensed under GPL3.
+ * Original source: https://github.com/Daxanius/NoMiningCooldown/blob/edec22aa84ecd775835feb1078c00651a2d4cc0c/src/main/java/me/daxanius/nmc/NoMiningCooldownClient.java
+ *
+ * Tweaks I made:
+ * - Converted to Kotlin
+ * - Tweaks to variable names & identifier strings to reference my mod name
+ */
 package technology.bootleg.miningcooldowntoggle
 
 import net.fabricmc.api.ClientModInitializer

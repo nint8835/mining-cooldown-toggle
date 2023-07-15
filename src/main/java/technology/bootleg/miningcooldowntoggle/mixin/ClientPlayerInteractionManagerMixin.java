@@ -1,3 +1,12 @@
+/**
+ * Based on ClientPlayerInteractionManagerMixin.java from the NoMiningCooldown mod by Daxanius, licensed under GPL3.
+ * Original source: https://github.com/Daxanius/NoMiningCooldown/blob/edec22aa84ecd775835feb1078c00651a2d4cc0c/src/main/java/me/daxanius/nmc/mixin/ClientPlayerInteractionManagerMixin.java
+ *
+ * Tweaks I made:
+ * - Tweak to function name
+ * - Modified function body to interact with the Kotlin side of the mod
+ */
+
 package technology.bootleg.miningcooldowntoggle.mixin;
 
 import net.minecraft.client.network.ClientPlayerInteractionManager;
