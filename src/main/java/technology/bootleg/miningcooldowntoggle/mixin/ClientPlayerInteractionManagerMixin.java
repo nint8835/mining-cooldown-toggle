@@ -19,6 +19,6 @@ import technology.bootleg.miningcooldowntoggle.MiningCooldownToggleClient;
 public class ClientPlayerInteractionManagerMixin {
 	@ModifyConstant(method = "updateBlockBreakingProgress", constant = @Constant(intValue = 5))
 	private int MiningCooldownToggle(int value) {
-		return MiningCooldownToggleClient.Companion.getCooldownEnabled() ? 0 : value;
+		return MiningCooldownToggleClient.Companion.getCooldownEnabled() ? value : 0;
 	}
 }
