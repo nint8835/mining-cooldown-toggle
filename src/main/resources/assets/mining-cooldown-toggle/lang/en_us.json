@@ -1,4 +1,6 @@
 {
   "key.miningcooldowntoggle.toggle": "Toggle Mining Cooldown",
-  "key.categories.miningcooldowntoggle": "Mining Cooldown Toggle"
+  "key.categories.miningcooldowntoggle": "Mining Cooldown Toggle",
+  "text.miningcooldowntoggle.enabled": "Mining cooldown enabled",
+  "text.miningcooldowntoggle.disabled": "Mining cooldown disabled"
 }

@@ -17,6 +17,7 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.minecraft.client.option.KeyBinding
 import net.minecraft.client.util.InputUtil
 import net.minecraft.text.Text
+import net.minecraft.util.Formatting
 import org.lwjgl.glfw.GLFW
 
 @Environment(net.fabricmc.api.EnvType.CLIENT)
@@ -38,9 +39,14 @@ class MiningCooldownToggleClient : ClientModInitializer {
             while (keybind.wasPressed()) {
                 client.player?.let {
                     cooldownEnabled = !cooldownEnabled
-                    it.sendMessage(
-                        Text.literal("Cooldown toggled"), true
-                    )
+
+                    val message: Text = if (cooldownEnabled) {
+                        Text.translatable("text.miningcooldowntoggle.enabled").formatted(Formatting.GREEN)
+                    } else {
+                        Text.translatable("text.miningcooldowntoggle.disabled").formatted(Formatting.RED)
+                    }
+
+                    it.sendMessage(message, true)
                 }
             }
         })
