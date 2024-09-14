@@ -3,15 +3,15 @@
 	"id": "mining-cooldown-toggle",
 	"version": "${version}",
 	"name": "Mining Cooldown Toggle",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Toggle the default mining cooldown with a single button press.",
 	"authors": [
-		"Me!"
+		"nint8835"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/nint8835/mining-cooldown-toggle",
+		"sources": "https://github.com/nint8835/mining-cooldown-toggle"
 	},
-	"license": "CC0-1.0",
+	"license": "GPL3",
 	"icon": "assets/mining-cooldown-toggle/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -26,13 +26,10 @@
 		"mining-cooldown-toggle.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
 		"fabric-api": "*",
-		"fabric-language-kotlin": ">=1.9.0"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"fabric-language-kotlin": ">=1.12.1"
 	}
 }
